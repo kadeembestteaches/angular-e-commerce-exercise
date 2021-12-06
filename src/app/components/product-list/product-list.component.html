@@ -1,0 +1,14 @@
+<div id="heading-area" class="grid grid-col-4">
+
+    <h2>Product</h2>
+    <h2>Quantity</h2>
+    <h2>Unit Price</h2>
+    <h2>Extended Price</h2>
+</div>
+
+<div id="product-rows-area">
+
+    <app-product *ngFor="let product of products"  [product]="product" (newProduct)="increaseQty($event)"  (newProduct2)="decreaseQty($event)"></app-product>
+  
+    <button class="btn" type="button" id="calculateButton">Calculate</button>
+</div>
